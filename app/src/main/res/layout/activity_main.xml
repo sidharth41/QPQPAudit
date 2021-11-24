@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="QP Audit Form"
+            android:backgroundTint="@android:color/white"
+            app:titleTextColor="@color/black"
+
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            />
+
+
+    <ScrollView
+        android:layout_below="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="300dp"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeColor="@color/black"
+                android:id="@+id/al0"
+                android:layout_marginTop="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextColor="@color/black"
+                app:counterTextColor="@color/black"
+                android:layout_centerHorizontal="true"
+
+
+                android:layout_height="wrap_content"
+
+                android:hint="Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/a0"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="300dp"
+                android:id="@+id/course"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                app:counterTextColor="@color/black"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/al0"
+                android:hint="Course Name">
+
+                <AutoCompleteTextView
+
+                    android:layout_width="match_parent"
+                    android:id="@+id/coursename"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/view_pdf"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:theme="@style/Theme.MaterialComponents"
+                android:layout_width="300dp"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/course"
+
+                android:padding="5dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:text="View"
+                />
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfviewer"
+                android:layout_below="@+id/view_pdf"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/pdfviewer"
+        android:textAlignment="center"
+        android:id="@+id/q1"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="1. Questions are clear and definite with no ambiguities: "/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q1"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:id="@+id/al1"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a1"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al1"
+        android:textAlignment="center"
+        android:id="@+id/q2"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="2. Course code, course name, date and session are given as per CAT timetable"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q2"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al2"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a2"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al2"
+        android:textAlignment="center"
+        android:id="@+id/q3"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="3. Use of appropriate keyword for the revised Bloom level"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q3"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al3"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a3"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al3"
+        android:textAlignment="center"
+        android:id="@+id/q4"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="4. Question paper is set for the Maximum marks allotted"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q4"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al4"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a4"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al4"
+        android:textAlignment="center"
+        android:id="@+id/q5"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="5. Correctness of categorization of each Question as per CO list given in the Syllabus"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q5"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al5"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a5"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al5"
+        android:textAlignment="center"
+        android:id="@+id/q6"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="6. Consistency of mapping of each question w.r.t revised Bloom's level and the CO"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q6"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al6"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a6"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al6"
+        android:textAlignment="center"
+        android:id="@+id/q7"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="7. Correctness weightage of each question as per assessment pattern"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q7"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al7"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a7"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="4dp"
+        android:layout_below="@+id/al7"
+        android:textAlignment="center"
+        android:id="@+id/q8"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:text="8. Split-up marks for each sub-divisions are given correctly in the Question
+paper
+"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/q8"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:id="@+id/al8"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/black"
+        app:counterTextColor="@color/black"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/a8"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:layout_below="@+id/al8"
+                android:textAlignment="center"
+                android:id="@+id/q9"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp"
+                android:text="9. Coverage of syllabus "/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/q9"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="300dp"
+                android:id="@+id/al9"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextColor="@color/black"
+                app:counterTextColor="@color/black"
+                android:layout_centerHorizontal="true"
+
+
+                android:layout_height="wrap_content"
+
+                android:hint="">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/a9"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:layout_below="@+id/al9"
+                android:textAlignment="center"
+                android:id="@+id/q10"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp"
+                android:text="10. Other Remarks"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/q10"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="300dp"
+                android:id="@+id/al10"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextColor="@color/black"
+                app:counterTextColor="@color/black"
+                android:layout_centerHorizontal="true"
+
+
+                android:layout_height="wrap_content"
+
+                android:hint="">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/a10"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/submit_input"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:theme="@style/Theme.MaterialComponents"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/al10"
+
+                android:padding="5dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:text="Submit"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

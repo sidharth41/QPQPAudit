@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924946154431",
+    "project_id": "qpaudit-7b4ee",
+    "storage_bucket": "qpaudit-7b4ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924946154431:android:0b2ce83bd98e81e0d2170a",
+        "android_client_info": {
+          "package_name": "com.tce.qpaudit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924946154431-b6reoiv2kuducdq8c7pvm5oqibomq3v5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPG1hWPh4grHEhmrOmCIxKEhp1xuFJ9p4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924946154431-b6reoiv2kuducdq8c7pvm5oqibomq3v5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
